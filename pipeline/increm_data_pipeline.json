@@ -31,7 +31,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from source_cars_data where Date_ID >activity('last_load').output",
+							"value": "select * from source_cars_data where Date_ID > @{activity('last_load').output}  AND Date_ID <= @{activity('current_load').output}",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
