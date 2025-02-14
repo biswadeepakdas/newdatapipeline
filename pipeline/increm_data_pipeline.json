@@ -5,8 +5,6 @@
 			{
 				"name": "Copy_increm_data",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "last_load",
